@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+    <title>sG - free, smart and fast standalone Javascript Lightbox</title>
+    <meta charset="utf-8">
+    <style>
+        html,body{height:100%}
+        body{font:.9em 'OpenSans','Open Sans',Helvetica,Arial,sans-serif;background:#f2f2f2}
+        code{background:#f4f4f4;padding:6px 12px 6px 12px;font:.85em/1.8em Inconsolata,'Droid Sans Mono','Liberation Mono','Source Code Pro',Consolas,sans-serif;border:1px dashed #dfdfdf}
+        .clear{clear:both}
+        p code{display:block;margin:12px}
+        p { line-height:1.5em }
+        .wrapper{display:block;width:75%;background:#fff;padding:6px 12px 24px 24px;margin:120px auto;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px}
+        .example li{float:left;list-style:none}
+        .example img{display:block;border:2px solid #000;margin:6px}
+        .example img:hover{border-color:#f4f4f4}
+        div.dl{width:300px;float:right;margin:24px}
+        a.download-button{display:block;padding:15px 20px 10px 20px;color:#fff;text-decoration:none;font-size:18px;font-weight:bold;background:#33a700 url('http://i.imgur.com/wt7UJ.png') no-repeat 92% 50%;border:2px solid #339410;-webkit-box-shadow:3px 3px 5px #000;-moz-box-shadow:3px 3px 5px #000;box-shadow:3px 3px 5px #000;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-transition:350ms;-moz-transition:350ms;-o-transition:350ms;transition:350ms}
+        a.download-button:hover{background-color:#267c00;background-position:90% 50%}
+        a.download-button span{font-size:12px;display:block;margin-top:2px}
+    </style>
+    <link rel="stylesheet" href="sg.min.css" type="text/css" media="screen">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dl"><a href='https://github.com/basteyy/sG/archive/master.zip' class='download-button'>Download<span>Latest version from GitHub</span></a></div>
+        <h1>sG: free, smart and fast standalone JS-Lightbox</h1>
+
+        <p>
+            Dies ist die Beispielseite, die dir zeigt, was sG eigentlich ist und kann. Eine ausführliche README und Informationen zur Installation findest du auf <a href="https://github.com/basteyy/sg/#readme" title="Sourcecode und Anleitungen auf Github">Github</a>.
+        </p>
+
+        <h2>Beispiel</h2>
+        <h3>Example 2 ( <code>data-sg="group1"</code>)</h3>
+        <ul class="example">
+            <li><a data-sg="group00" href="http://cdn.34n.de/sg/images/storm-troopers-112224_1920.jpg"><img src="http://cdn.34n.de/sg/images/storm-troopers-112224_150.jpg"></a></li>
+            <li><a data-sg="group1" href="http://cdn.34n.de/sg/images/girl-111693_1920.jpg"><img src="http://cdn.34n.de/sg/images/girl-111693_150.jpg"></a></li>
+            <li><a data-sg="group1" href="http://cdn.34n.de/sg/images/rollerderby-112223_1920.jpg"><img src="http://cdn.34n.de/sg/images/rollerderby-112223_150.jpg"></a></li>
+            <li><a data-sg="group1" href="http://cdn.34n.de/sg/images/girl-91692_640.jpg"><img src="http://cdn.34n.de/sg/images/girl-91692_150.jpg"></a></li>
+            <li><a data-sg="group1" href="http://cdn.34n.de/sg/images/lake-65446_1280.jpg"><img src="http://cdn.34n.de/sg/images/lake-65446_150.jpg"></a></li>
+        </ul>
+        <br class="clear">
+
+        <h3>Example 2 ( <code>data-sg="gruppe_2"</code>)</h3>
+
+        <ul class="example">
+            <li><a data-sg="gruppe_2" href="http://cdn.34n.de/sg/images/kids-57069_1920.jpg"><img src="http://cdn.34n.de/sg/images/kids-57069_150.jpg"></a></li>
+            <li><a data-sg="gruppe_2" href="http://cdn.34n.de/sg/images/kids-56951_1280.jpg"><img src="http://cdn.34n.de/sg/images/kids-56951_150.jpg"></a></li>
+            <li><a data-sg="gruppe_2" href="http://cdn.34n.de/sg/images/kids-57080_640.jpg"><img src="http://cdn.34n.de/sg/images/kids-57080_150.jpg"></a></li>
+            <li><a data-sg="gruppe_2" href="http://farm5.staticflickr.com/4150/5067353466_6eeb170197_q.jpg"><img src="http://farm5.staticflickr.com/4150/5067353466_6eeb170197_q.jpg"></a></li>
+        </ul>
+        <br class="clear">
+
+        <p>
+            <strong>Bilder</strong> &copy; Alle Rechte vorbehalten von <a href="http://pixabay.com/de/users/Greyerbaby/">Lisa Runnels</a>
+        </p>
+
+        <h4>&copy; PUBLIC DOMAIN - Do what ever you want ;) &mdash; 2013 <a href="http://sebastian-eiweleit.de">Sebastian Eiweleit</a></h4>
+    </div>
+<div id="sgBg"></div><div id="sgLayer"><div id="sgNav"><a href="#" onclick="sg.go(-1); return false;" title="Zum vorherigen Bild" class="prev"></a><a href="#" onclick="sg.go(1); return false;" title="Zum nächsten Bild" class="next"></a></div><div id="sgImg"><div id="sgAct"><a href="#" onclick="sg.close(); return false;" title="Bild schließen" class="close"></a><a href="#" title="Bild öffnen" target="_blank" class="zoom"></a></div></div></div><script src="sg.min.js" charset="utf-8"></script>
+</body>
+</html>
