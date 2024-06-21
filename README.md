@@ -1,4 +1,105 @@
-# sg
+# sg (Englisch)
+
+sg is a small lightbox. It is free, fast, and standalone. Since I have placed it in the public domain, you can do anything with it. Have fun!
+
+## Setup 
+
+### Step 1 
+
+Include the CSS file in your HTML document (feel free to put the code in your own CSS file or place it directly in the head of the document):
+
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/basteyy/sg/sg.min.css" type="text/css" media="screen">
+```
+
+### Step 2 
+
+Add the data-sg attribute to all links:
+
+
+```html
+<a href="my_image.jpg" data-sg="group1">My Image 1</a>
+<a href="my_image2.jpg" data-sg="group1">My Image 2</a>
+
+<a href="example.jpg" data-sg="2"><img src="example.thumb.jpg"></a>
+```
+
+### Step 3 
+
+Now include the HTML code and the script:
+
+
+```html
+<!-- HTML Code -->
+<div id="sgBg"></div><div id="sgLayer"><div id="sgNav"><a href="#" onclick="sg.go(-1); return false;" title="Previous Image" class="prev"></a><a href="#" onclick="sg.go(1); return false;" title="Next Image" class="next"></a></div><div id="sgImg"><div id="sgAct"><a href="#" onclick="sg.close(); return false;" title="Close Image" class="close"></a><a href="#" title="Open Image" target="_blank" class="zoom"></a></div></div></div>
+
+<!-- The Script -->
+<script src="https://cdn.jsdelivr.net/gh/basteyy/sg/sg.min.js" charset="utf-8"></script>
+```
+
+### Step 4 
+
+Done. Now test the page to see if it works.
+
+## Example 
+You can find a demo online at [http://cdn.34n.de/sg/example.html](http://cdn.34n.de/sg/example.html) 
+## API 
+Using the `sg.preLoad({..});` method, you can customize certain things. Here is a list: 
+- **max_width_all**  *Number {default: void}* A maximum width for all images
+ 
+- **max_height_all**  *Number {default: void}* A maximum height for all images
+ 
+- **ratio**  *Boolean {default: true}* If the width or height of the image exceeds the allowed size, the aspect ratio will be maintained to avoid distortion
+ 
+- **smart_control**  *Boolean {default: true}* When enabled, the control elements for closing and enlarging the image will move above or below the image if the lightbox is too small
+
+### Using the sG API 
+
+
+```html
+<script>sg.preLoad({max_width_all: 200, max_height_all: 500, ratio: true});</script>
+```
+
+## sG F.A.Q. 
+
+### How do I use the group function? 
+
+The value of the data-sg attribute determines which group an element belongs to. Simply assign the same value to the images that should be in the same group. And that's it. (See example.html)
+
+### Why should I insert the HTML code myself into the document? 
+
+Because it is faster. The alternative would be to create a new element via JavaScript and trigger the corresponding functions on it. Even though the difference might be negligible, directly inserting it into the source code not only provides speed advantages but also an easier way to customize the lightbox.
+
+### Can I also use text and other elements as triggers? 
+
+The script reacts to links (<a href...) with the data-sg tag (<a href="" data-sg=".."). Therefore, the content (what is enclosed by the link tag) is freely designable.
+
+
+```html
+<a href="http://example.com/myImage.png" data-sg="1">I am text</a>
+```
+
+### How can I customize the script? 
+
+All colors and graphics are defined via CSS. So simply adjust the sg.min.css.
+
+### How may I use the script? 
+
+There are no restrictions. The script is in the public domain and may be used by you for any purpose.
+
+### How should I embed the script? 
+The script should be fast. And it is only fast if you embed it correctly. Just place everything at the end of the document (see this example.html). This way, everything will be executed only after the HTML document has already been loaded. The script **must not be placed in the header** .
+### But I want to place the file in the header and I WANT it to work!! 
+
+Then you need to execute the following code at the end of the file (after all images have been inserted into the HTML document):
+
+
+```html
+<script>sg.init();</script>
+```
+
+# sg (Deutsch)
 sg ist eine kleine Lightbox. Sie ist kostenlos, schnell und standalone. Da ich sie unter Public Domain gestellt habe, kannst du alles mit ihr machen. Viel Spaß!
 
 ## Einrichten
@@ -76,7 +177,7 @@ Dann musst du am Ende der Datei (wenn alle Bilder im HTML-Dokument eingefügt wo
 <script>sg.init();</script>
 ```
 
-## License
+# License
 
 MIT License
 
