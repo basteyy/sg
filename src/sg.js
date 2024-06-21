@@ -119,7 +119,7 @@ var sg = function() {
         preLoad: function(c) {
             sg.doLog('sg.preLoad start');
             /* Das Load-Gif global setzen */
-            Config.LoadImg = (c.LoadImg ? c.LoadImg : 'http://cdn.34n.de/sg/load.gif');
+            Config.LoadImg = (c.LoadImg ? c.LoadImg : '//cdn.34n.de/sg/load.gif');
             
             if (c.max_width_all) {
                 Config.max_width_all = c.max_width_all;
